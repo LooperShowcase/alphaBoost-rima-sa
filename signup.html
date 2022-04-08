@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+  </head>
+  <body>
+    <link rel="stylesheet" href="style.css" />
+
+    <ul>
+      <li><a class="active" href="INDEX.HTML">Home</a></li>
+      <li><a href="signup.html">signup</a></li>
+      <li><a href="pictures.html">Picture</a></li>
+      <li>
+        <img 
+        id="profpic"
+          src="https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png"
+          width="50px"
+          height="50px"
+        />
+      </li>
+      <li><input id="colorpicker" onchange="changeBG()" type="color" /></li>
+    </ul>
+    <center>
+
+      <form>
+        <label>first neme</label>
+        <input type="text" name="" id="" />
+        <br>
+        <label>last neme</label>
+        <input type="text" name="" id="" />
+        <br>
+        <input id="upload" type="file" onchange="changePic()">
+      
+      </form>
+    </center>
+
+    <script>
+      function changeBG() {
+        var newcolor = document.getElementById("colorpicker").value;
+        document.body.style.background = newcolor;
+      }
+
+      function changePic() {
+        var newPic =document.getElementById("upload").files[0].name;
+        document.getElementById("profpic").src=newPic;
+      }
+    </script>
+
+
+
+
+
+
+
+  </body>
+</html>
